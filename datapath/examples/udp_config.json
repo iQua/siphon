@@ -1,0 +1,19 @@
+{
+  "MaxMessageSize": 2048,
+  "UDP": {
+    "CoderName": "test",
+    "CoderDelayConstraint": 1,
+    "CoderLossRate": 1,
+    "CoderLossBurst": 1
+  },
+  "PseudoSessions": [
+    {
+      "SessionID": "3",
+      "Src": 1,
+      "Dst": 3,
+      "Rate": 40 ,
+      "BurstSize": 1,
+      "MessageSize": 60
+    }
+  ]
+}

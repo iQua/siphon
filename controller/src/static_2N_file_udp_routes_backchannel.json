@@ -1,0 +1,30 @@
+{
+  "MaxMessageSize": 3500,
+  "UDP": {},
+  "PseudoSessions": [
+    {
+      "SessionID": "2-1",
+      "Src": 2,
+      "Dst": 1,
+      "Path": [2, 1],
+      "Rate": 50,
+      "BurstSize": 1,
+      "MessageSize": 3100,
+      "PayloadSize": 300,
+      "OriDataPath": "conversation_ref.wav",
+      "SessionType": "forwardSession"
+    },
+    {
+      "SessionID": "1-2",
+      "Src": 1,
+      "Dst": 2,
+      "Path": [1, 2],
+      "Rate": 50,
+      "BurstSize": 1,
+      "MessageSize": 3100,
+      "PayloadSize": 300,
+      "OriDataPath": "",
+      "SessionType": "backSession"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package siphon;
+
+message MessageHeader {
+  // Required. Set by one of the apps (PsuedoApp or RCP source).
+  string session_id = 1;
+
+  // Required. Set by one of the apps (PsuedoApp or RCP source).
+  uint64 seq = 2;
+
+  // Set by ISender while serializing Message.
+  uint64 payload_size = 3;
+
+  // Set by ISender.
+  bool ack = 11;
+
+  // Set by ISender.
+  uint32 src = 12;
+
+  // Set by ISender.
+  uint32 dst = 13;
+
+  // Set right before sending out via socket.
+  int64 timestamp = 14;
+
+  // Set by encoder (original datagram), or decoder (ack).
+  uint32 coding_parameters = 20;
+}
+

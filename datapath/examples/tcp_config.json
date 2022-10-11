@@ -1,0 +1,14 @@
+{
+  "MaxMessageSize": 2048,
+  "TCP": {},
+  "PseudoSessions": [
+    {
+      "SessionID": "1",
+      "Src": 2,
+      "Dst": 1,
+      "Rate": 2,
+      "BurstSize": 1,
+      "MessageSize": 1972
+    }
+  ]
+}

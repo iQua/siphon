@@ -1,0 +1,3 @@
+#!/bin/sh
+gcc ../demos/example-codeRS.c ../main.c ../src/FIFOqueue/FIFO.c -o demo_rs
+./demo_rs

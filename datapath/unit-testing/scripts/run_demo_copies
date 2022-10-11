@@ -1,0 +1,4 @@
+#!/bin/sh
+gcc ../demos/example-codec.c ../main.c ../src/FIFOqueue/FIFO.c ../src/utils/Dictionary.c -o demo_copies
+./demo_copies
+

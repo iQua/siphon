@@ -1,0 +1,73 @@
+# docker-compose.yml
+version: '3'
+
+networks:
+  network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.16.8.0/24
+
+services:
+  controller:
+    container_name: controller
+    hostname: controller
+    image: siphon_controller
+    ports:
+      - "8080:80"
+    volumes:
+      - ../siphon_controller:/var/siphone_controller/
+    networks:
+      network:
+        ipv4_address: 172.16.8.2
+    stdin_open: true
+
+  node1:
+    container_name: node1
+    hostname: node1
+    user: admin
+    image: siphon_datapath
+    build:
+        context: ./
+        dockerfile: ./Dockerfile  
+    networks:
+      network:
+        ipv4_address: 172.16.8.3
+    stdin_open: true
+    privileged: true
+    cap_add:
+        - NET_ADMIN
+          
+  node2:
+    container_name: node2
+    hostname: node2
+    user: admin
+    image: siphon_datapath
+    build:
+        context: ./
+        dockerfile: ./Dockerfile
+    networks:
+      network:
+        ipv4_address: 172.16.8.4
+    stdin_open: true
+    privileged: true
+    cap_add:
+        - NET_ADMIN
+
+  node3:
+    container_name: node3
+    hostname: node3
+    user: admin
+    image: siphon_datapath
+    build:
+        context: ./
+        dockerfile: ./Dockerfile
+    networks:
+      network:
+        ipv4_address: 172.16.8.5
+    stdin_open: true
+    privileged: true
+    cap_add:
+        - NET_ADMIN
+        

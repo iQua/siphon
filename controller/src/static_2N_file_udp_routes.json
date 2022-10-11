@@ -1,0 +1,18 @@
+{
+  "MaxMessageSize": 800,
+  "UDP": {},
+  "PseudoSessions": [
+    {
+      "SessionID": "2-1",
+      "Src": 2,
+      "Dst": 1,
+      "Path": [2, 1],
+      "Rate": 100,
+      "BurstSize": 1,
+      "MessageSize": 600,
+      "PayloadSize": 300,
+      "OriDataPath": "conversation_ref.wav",
+      "SessionType": "forwardSession"
+    }
+  ]
+}

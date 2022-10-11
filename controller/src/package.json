@@ -1,0 +1,16 @@
+{
+  "name": "siphon_controller",
+  "version": "1.0.0",
+  "description": "The controller for the Siphon framework",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Shuhao Liu <shuhao@ece.toronto.edu>",
+  "license": "MIT",
+  "dependencies": {
+    "ioredis": "^3.2.2",
+    "underscore": "1.8.3"
+  }
+}

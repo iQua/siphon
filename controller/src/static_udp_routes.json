@@ -1,0 +1,14 @@
+{
+  "MaxMessageSize": 2048,
+  "UDP": {},
+  "PseudoSessions": [
+    {
+      "SessionID": "3",
+      "Src": 1,
+      "Dst": 3,
+      "Rate": 40 ,
+      "BurstSize": 1,
+      "MessageSize": 60
+    }
+  ]
+}

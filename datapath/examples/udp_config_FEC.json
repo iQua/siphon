@@ -1,0 +1,19 @@
+{
+  "MaxMessageSize": 9000,
+  "UDP": {
+    "CoderName": "UDPCoder",
+    "CoderDelayConstraint": 10,
+    "CoderLossRate": 0,
+    "CoderLossBurst": 0
+  },
+  "PseudoSessions": [
+    {
+      "SessionID": "3",
+      "Src": 1,
+      "Dst": 3,
+      "Rate": 100,
+      "BurstSize": 1,
+      "MessageSize": 300
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package siphon;
+
+/**
+ * Service used by clients to register a broadcast on the Controller.
+ */
+service SiphonRPC {
+  rpc AppPublish (stream AppPublishData) returns (SimpleAck) {}
+  rpc AppSubscribe (AppRegistration) returns (stream AppData) {}
+};
+
+message AppRegistration {
+  // Identifier of the application
+  string app_id = 1;
+  // Identifier of the client
+  string hostname = 2;
+}
+
+message SimpleAck {
+  bool succeed = 1;
+}
+
+message AppPublishData {
+  string sender = 1;
+  string channel = 2;
+  string metadata = 3; // metadata serves as a flow identifier
+  bytes data = 4;
+  int32 seq = 5;
+}
+
+message AppData {
+  string sender = 1;
+  string metadata = 2;
+  bytes data = 3; // Empty data representing the last fragment
+  int32 seq = 4;
+}
