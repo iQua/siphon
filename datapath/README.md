@@ -75,8 +75,8 @@ Compiling and testing Protocol Buffers from source will take quite a long time. 
 To build Siphon datapath aggregator on either macOS and Linux, run
 
 ```shell
-$ git clone https://github.com/iqua/siphon_datapath.git
-$ cd siphon_datapath
+$ git clone https://github.com/iqua/siphon
+$ cd siphon/datapath
 $ ./dependencies.sh
 $ ./build.sh
 ```
