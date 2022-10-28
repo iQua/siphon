@@ -16,17 +16,6 @@ case "$OSTYPE" in
     ;;
 esac
 
-echo "Installing Isa-l"
-mkdir -p /tmp/siphon-deps
-cd   /tmp/siphon-deps
-git clone https://github.com/01org/isa-l.git
-cd isa-l
-./autogen.sh
-./configure --prefix=/usr/local --libdir=/usr/local/lib 
-make
-sudo make install
-
 echo "Updating Submodules"
 cd $CDIR
 git submodule update --init --recursive
-
